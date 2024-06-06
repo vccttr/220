@@ -1,0 +1,8 @@
+import requests
+
+url = 'http://IP_ADDRESS_OF_YOUR_SMART_HOME_DEVICE/api/commands'
+headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'}
+data = '{"command": "open_curtains"}'
+
+response = requests.post(url, headers=headers, data=data)
+print(response.status_code)
